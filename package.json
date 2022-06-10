@@ -28,8 +28,13 @@
   ],
   "dependencies": {
     "dom7": "^2.1.5",
+<<<<<<< HEAD
     "framework7": "^7.0.5",
     "framework7-icons": "^3.0.1",
+=======
+    "framework7": "^5.7.10",
+    "framework7-icons": "^5.0.5",
+>>>>>>> remotes/origin/dependabot/npm_and_yarn/framework7-icons-5.0.5
     "template7": "^1.4.2"
   },
   "devDependencies": {
