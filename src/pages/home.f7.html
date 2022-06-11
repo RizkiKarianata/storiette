@@ -1,12 +1,46 @@
+<style>
+	.card-backdrop {
+    	background: transparent;
+    	backdrop-filter: none;
+	}
+	.card-backdrop-in {
+		pointer-events: none;
+	}
+</style>
 <template>
 	<div class="page">
-		<div class="navbar navbar-cart">
-			<div class="navbar-inner">
+		<div class="navbar">
+			<div class="navbar-bg"></div>
+			<div class="navbar-inner sliding">
 				<div class="left"></div>
-				<div class="right"></div>
+				<div class="title">Storiette</div>
 			</div>
 		</div>
-		<div class="page-content"></div>
+		<div class="page-content">
+			<div class="block">
+				{{#each data}}
+				<div class="card card-expandable">
+					<div class="card-content">
+						<div class="bg-color-{{this.background}}" style="height: 300px">
+							<div class="card-header text-color-white display-block">
+					  			{{this.author}}
+					  			<br>
+					  			<small style="opacity: 0.7">{{this.title}}</small>
+							</div>
+							<a href="#" class="link card-close card-opened-fade-in color-black" style="position: absolute; right: 15px; top: 15px">
+								<i class="icon f7-icons">xmark_circle_fill</i>
+							</a>
+						</div>
+						<div class="card-content-padding">
+							<p>{{this.story}}</p>
+							<br>
+							<strong>The moral of the short story is {{this.moral}}</strong>
+				  		</div>
+					</div>
+			  	</div>
+				{{/each}}
+			</div>
+		</div>
 	</div>
 </template>
 <script>
@@ -16,6 +50,26 @@
 			var app = this.$app;
 			var $$ = this.$$;
 			var self = this;
+		},
+		on: {
+			pageInit: function () {
+				var self = this;
+				var $this = this;
+				var app = this.$app;
+				var $$ = this.$$;
+				var response = new Array();
+				var bg = ['blue', 'red', 'yellow', 'green', 'purple'];
+
+				app.request.get('https://shortstories-api.herokuapp.com/stories', (data, status, xhr) => {
+					response = JSON.parse(data);
+					response.forEach(value => {
+						value.background = bg[Math.floor(Math.random() * bg.length)];;
+					});
+					self.$setState({
+						data: response
+					});
+				});
+			},
 		}
 	}
 </script>
