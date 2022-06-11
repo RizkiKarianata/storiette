@@ -1,1 +1,3 @@
+cordova/platforms/
+cordova/www/
 node_modules/
