@@ -1,5 +1,7 @@
 <h1 align="center">Welcome to Storiette! 👋 </h1>
 
+![Neutrans](https://user-images.githubusercontent.com/52366240/173199427-1ed4dda4-5929-4ada-a3a1-1522fd4578a7.png)
+
 <p align="center">Storiette is a simple open source project used to read a collection of short stories in Indonesian. This storiette is suitable for use by small children who like to read short stories. Built using Framework7. 💖 </p>
 
 <p align="center">
