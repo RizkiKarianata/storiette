@@ -1,0 +1,30 @@
+{
+  "prepare_queue": {
+    "installed": [],
+    "uninstalled": []
+  },
+  "config_munge": {
+    "files": {}
+  },
+  "installed_plugins": {
+    "cordova-plugin-statusbar": {
+      "PACKAGE_NAME": "io.framework7.myapp"
+    },
+    "cordova-plugin-keyboard": {
+      "PACKAGE_NAME": "io.framework7.myapp"
+    },
+    "cordova-plugin-splashscreen": {
+      "PACKAGE_NAME": "io.framework7.myapp"
+    },
+    "cordova-plugin-qrscanner": {
+      "PACKAGE_NAME": "io.framework7.myapp"
+    },
+    "cordova-plugin-inappbrowser": {
+      "PACKAGE_NAME": "io.framework7.myapp"
+    },
+    "cordova-plugin-whitelist": {
+      "PACKAGE_NAME": "io.framework7.myapp"
+    }
+  },
+  "dependent_plugins": {}
+}
