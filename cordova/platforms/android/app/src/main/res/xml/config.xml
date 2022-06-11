@@ -21,7 +21,7 @@
     <feature name="Keyboard">
         <param name="android-package" onload="true" value="org.apache.cordova.labs.keyboard.Keyboard" />
     </feature>
-    <name>Neutrans</name>
+    <name>Storiette</name>
     <description>
         A sample Apache Cordova application that responds to the deviceready event.
     </description>
